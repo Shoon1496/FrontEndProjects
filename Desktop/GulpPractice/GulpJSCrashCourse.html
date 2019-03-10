@@ -1,0 +1,310 @@
+Console Starts-->
+npm install -g gulp 
+<!-- g stands for global to access from anywhere on our system -->
+mkdir gulpexapp
+cd gulpexapp
+sublime text.
+<!-- Create a package.jason file in Sublime text -->
+npm init
+description => Example app using Gulp
+<!-- Don't fill others -->
+<!-- Is this ok? (yes) -->
+npm install --save-dev gulp
+<!-- Console Ends-->
+
+<!-- Sublime Text Starts -->
+<!-- instructions -->
+create new folder 'src'
+create a new file 'gulp.js' in the same directory
+
+<!-- gulp.js Starts -->
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+
+<!-- --Top LEVEL FUNCTIONS--
+gulp.task - Define tasks
+gulp.src - Point tofiles to use
+gulp.dest - Points to folder to output
+gulp.watch - watch files and folders for changes -->
+
+<!-- Logs Message -->
+gulp.task('message', function(){
+	return console.log('Gulp is running');
+});
+
+gulp.task('default', function(){
+	return console.log('Gulp is running');
+});
+<!-- gulp.js Ends -->
+<!-- Sublime Text Ends -->
+
+<!-- Console Starts-->
+gulp
+<!-- Console Ends-->
+
+<!-- Sublime Text Starts -->
+create a new file 'index.html' in 'src' folder
+html => title => My Example App => h1 => 'My Example App'
+create one more file 'about.html' in 'src' folder
+copy everythting of index.html to about.html and change h1 content 'My Example App' to 'About Us'
+
+<!-- gulp.js -->
+gulp.task('message', function(){
+	return console.log('Gulp is running');
+});
+
+<!-- copy All HTML files -->
+gulp.task('copyhtml', function(){
+	gulp.src('src/*.html')
+	.pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', function(){
+	return console.log('Gulp is running');
+});
+<!-- Sublime Text Ends -->
+
+<!-- Console Starts-->
+gulp copyhtml
+<!-- Console Ends-->
+
+<!-- chrome google Starts-->
+search gulp-imagemin => github
+copy some stuffs from basic box
+<!-- chrome google Ends-->
+
+<!-- Console Starts-->
+npm install --save-dev gulp-imagemin
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- gulp.js -->
+gulp.task('copyhtml', function(){
+	gulp.src('src/*.html')
+	.pipe(gulp.dest('dist'));
+});
+
+<!-- optimize images -->
+paste from basics box
+gulp.task('imageMin', () => 
+	gulp.src('src/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/images'))
+);
+
+gulp.task('default', function(){
+	return console.log('Gulp is running');
+});
+create a folder 'images' in 'src' folder
+<!-- Sublime Ends -->
+
+<!-- chrome google Starts-->
+search 'gulp js png' and save it to 'images' folder of 'src'
+<!-- chrome google Ends-->
+
+<!-- Console Starts-->
+gulp imageMin
+<!-- after running, we can see the meory/resolustion of this downloaded image was decreased in dest folder -->
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+create a folder 'js' in 'src' folder
+create a new file 'file 1.js' in 'js' folder
+<!-- file1.js Starts -->
+<!-- Console log 1 -->
+console.log('This is file 1');
+
+<!-- Console log 2 -->
+console.log('This is file 2');
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+npm install --save-dev gulp-uglify
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- gulp.js Starts -->
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+<!-- gulp.js -->
+gulp.task('copyhtml', function(){
+	gulp.src('src/*.html')
+	.pipe(gulp.dest('dist'));
+});
+
+<!-- optimize images -->
+gulp.task('imageMin', () => 
+	gulp.src('src/images/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('dist/images'))
+);
+
+<!-- Minify JS -->
+gulp.task('minify', function(){
+	gulp.src('src/js/*.js');
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('default', function(){
+	return console.log('Gulp is running');
+});
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp minify
+npm install --save-dev gulp-sass
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- gulp.js Starts -->
+<!-- Minify JS -->
+gulp.task('minify', function(){
+	gulp.src('src/js/*.js');
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/js'))
+});
+
+<!-- compile sass-->
+gulp.task('sass', function(){
+	gulp.src('src/sass/*.scss');
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('default', function(){
+	return console.log('Gulp is running');
+});
+create a folder 'sass' in 'src' folder
+create a file 'style.scss' in 'sass' folder
+<!-- style.css starts -->
+$bgColor: #cccccc;
+
+body {
+	background:$bgcolor;
+}
+
+<!-- gulp.js Starts -->
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp sass
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- index.html starts -->
+<title>My Example App</title>
+<link rel="stylesheet" type="css/style.css" href="">
+<body></body>
+<script src="js/file1.js"></script>
+copy and paste that on about.html
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp copyHtml
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+go to 'dist' folder of 'src' and open 'index.html' on browser
+<!-- gulp.js Starts -->
+<!-- compile sass-->
+gulp.task('sass', function(){
+	gulp.src('src/sass/*.scss');
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('default', ['message', 'copyHtml', 'imageMin', 'minify', 'sass']
+
+delete 'dist' folder
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp 
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+create a new file 'file 2.js' in 'js' folder
+<!-- file2.js Starts -->
+<!-- Console log 2 -->
+console.log('This is file 2');
+alert('This is file 2');
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+npm install --save-dev gulp-concat
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- gulp.js Starts -->
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+
+<!-- compile sass-->
+gulp.task('sass', function(){
+	gulp.src('src/sass/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('dist/css'));
+});
+
+<!-- Scripts -->
+gulp.task('scripts', function(){
+	gulp.src('src/js/*.js')
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('default', ['message', 'copyHtml', 'imageMin', 'sass', 'scripts']
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+go to 'index.html' file of 'src' and change this
+<script src="js/main.js"></script>
+Do the same on 'about.html'
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+<!-- gulp.js Starts -->
+<!-- Scripts -->
+gulp.task('scripts', function(){
+	gulp.src('src/js/*.js')
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('default', ['message', 'copyHtml', 'imageMin', 'sass', 'scripts'])
+
+gulp.task('watch', function(){
+	gulp.watch('src/js/*.js', ['scripts']);
+	gulp.watch('src/images/*', ['imageMin']);
+	gulp.watch('src/sass/*.scss', ['imageMin']);
+	gulp.watch('src/.html/*', ['copyHtml']);
+});
+<!-- Sublime Ends -->
+
+<!-- Console Starts-->
+gulp watch
+<!-- Console Ends-->
+
+<!-- Sublime Starts -->
+go to 'index.html' file of 'src' and change this
+<h1>My Awsome App</h1>
+go to 'file 1.html' file of 'src' and change this
+console.log('This is file one')
+<!-- Sublime Ends -->
