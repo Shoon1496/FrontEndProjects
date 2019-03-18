@@ -22,7 +22,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	margin-bottom: 100px;
-	padding-bottom: 50px;
+	padding-bottom: 0px;
 }
 /* Header **/
 header{
@@ -121,7 +121,6 @@ header a:hover{
 	letter-spacing: -0.3px;
 	color: #000000;
 	mix-blend-mode: normal;
-	/*margin-top: 50px;*/
 	padding-left: 50px;
 	padding-top: 20px;
 }
@@ -134,7 +133,6 @@ header a:hover{
 	letter-spacing: -0.3px;
 	color: #000000;
 	mix-blend-mode: normal;
-	/*margin-top: 50px;*/
 	padding-left: 50px;
 }
 #black_botton_1 {
@@ -169,8 +167,6 @@ header a:hover{
 	margin: 0px 35px;
 	font-family: Ubuntu;
 	font-style: normal;
-	/*font-weight: 500;*/
-	/*line-height: 23px;*/
 	font-size: 10px;
 	text-transform: lowercase;
 	color: #000000;
@@ -193,7 +189,7 @@ header a:hover{
 }*/
 .latestjobs {
 	padding: 15px;
-	margin: -60px 0px 15px 0px;
+	margin: 0px 0px 15px 0px;
 }
 .LatestJobs_title {
 	font-family: Ubuntu;
@@ -310,7 +306,6 @@ p {
 	right: -4.94%;
 	opacity: 0.4;
 	border: 1px solid #979797;
-	/*padding-bottom: 50px;*/
 }
 .getWhereyouAreGoing_Title {
 	position: relative;
@@ -368,7 +363,6 @@ p {
 	height: 400px;
 	margin-top: 100px;
 	margin-left: 30px;
-	/*float: right;*/
 }
 .Why_ThalesCode {
 	font-family: Ubuntu;
@@ -530,7 +524,6 @@ p {
 	font-size: 13px;
 	line-height: 20px;
 	text-align: justify;
-
 	color: #8C93AA;
 }
 .card_paragraph_3 {
@@ -540,7 +533,6 @@ p {
 	font-size: 13px;
 	line-height: 20px;
 	text-align: justify;
-
 	color: #8C93AA;
 }
 .card_paragraph_4 {
@@ -559,7 +551,6 @@ p {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 39px;
-
 	color: #2B3247;
 }
 .Seek_for_where_we_are {
@@ -695,8 +686,6 @@ li {
 	color: #000000;
 	margin-left: 250px;
 }
-
-
 .CarouselContainer {
     width: 100%;
     height: 250px;
@@ -709,7 +698,6 @@ li {
     width: 100%;
     height: 90%;
     overflow: hidden;
-    /*background-color: gainsboro;*/
     position: relative;
 }
 .CarouselContainer .slideShowContainer #playPause:hover {
@@ -726,14 +714,12 @@ li {
 }
 .CarouselContainer .slideShowContainer>.captionTextHolder {
     position: absolute;
-    /*bottom: 0;*/
     z-index: 1;
     color: white;
     font-family: sans-serif;
     font-size: 20px;
     text-align: center;
     width: 100%;
-    /*background: #00000047;*/
     height: 50px;
     line-height: 50px;
     overflow: hidden;
