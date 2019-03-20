@@ -1,8 +1,63 @@
-@media (min-width: 768px) {
-  section.download .badges .badge-link {
+@media (max-width: 768px) {
+	section.download .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
-  }
+	}
+	#top-container {
+		background-image: url('images/top_bg_sp.jpg') !important;
+		height: 680px !important;
+		margin: 0 !important;
+		padding: 0;
+	}
+	.pc {
+  		display: none !important;
+	}
+	.sp {
+		display: block !important;
+	}
+	.line2 {
+		margin-left: 0 !important;
+	}
+	.thalescode1 {
+		margin-top: 50px;
+		letter-spacing: 0;
+		font-weight: bolder;
+		line-height: 25px;
+		font-size: 30px;
+	}
+	.thalescode_description1 .thalescode_description_2nd_line1 {
+		margin-top: 70px;
+		letter-spacing: 1px;
+		font-weight: bolder;
+		line-height: 25px;
+		font-size: 25px;
+	}
+	#black_botton_1 #black_botton_2 {
+		margin: 0px -50px !important;
+	}
+	#user_input form table {
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+		float: none !important;
+	}
+	/*.footer_subscribe .subscribe_email {
+		float: none !important;
+	}*/
+}
+.sp {
+	display: none;
+}
+body {
+	margin: 0;
+    padding: 0;
+}
+#user_input form table {
+	width: 300px;
+	float: right;
+}
+#user_input form input {
+	width: 100%;
 }
 .sidenav {
     width:3%;
@@ -17,14 +72,13 @@
 	background-color: white;
 	margin: 6px 0;
 }
-#background {
-	background: url(images/bg.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin-bottom: 100px;
-	padding-bottom: 0px;
+#top-container {
+	background-image: url('images/bg.jpg'); 
+	background-repeat: no-repeat;  
+	width: 100%;
+	mix-blend-mode: normal;
+	/*margin-left: 150px;*/
 }
-/* Header **/
 header{
 	 background:#35424a;
 	 color:#111;
@@ -54,11 +108,6 @@ header li{
 	font-size: 8px;
 	letter-spacing: 5px;
 	color: #2CA1F8;
-}
-#contact {
-	margin-right: 0px;
-	padding-right: 0px;
-	text-align: right;
 }
 header #branding{
 	float:left;
@@ -94,46 +143,45 @@ header a:hover{
 }
 .line2 {
 	top: 30px;
+	bottom: 20px;
 	border-top: 4px solid #333;
 	width: 20px;
 	position: absolute;
 	margin-left: 50px;
 }
 .thalescode {
-	font-family: Ubuntu;
+	font-family: sans-serif;
 	font-style: normal;
-	font-weight: bold;
-	line-height: 25px;
-	font-size: 30px;
-	letter-spacing: -0.3px;
+	font-weight: bolder;
+	line-height: 44px;
+	font-size: 44px;
 	color: #000000;
 	margin-top: 50px;
-	padding-left: 50px;
 	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 15px;
+	margin-left: 50px;
 }
 .thalescode_description {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	line-height: 43px;
+	line-height: 33px;
 	font-size: 25px;
-	letter-spacing: -0.3px;
+	letter-spacing: 1.6px;
 	color: #000000;
 	mix-blend-mode: normal;
-	padding-left: 50px;
-	padding-top: 20px;
+	padding-top: 20px;margin-left: 50px;
 }
 .thalescode_description_2nd_line {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	line-height: 43px;
+	line-height: 33px;
 	font-size: 25px;
-	letter-spacing: -0.3px;
+	letter-spacing: 1.6px;
 	color: #000000;
 	mix-blend-mode: normal;
-	padding-left: 50px;
+	margin-left: 50px;
 }
 #black_botton_1 {
 	font-family: Ubuntu;
@@ -164,29 +212,23 @@ header a:hover{
 	margin-top: 20px;
 }
 .thalescode_paragraph {
-	margin: 0px 35px;
+	margin: -40px 15px 55px 35px;
 	font-family: Ubuntu;
 	font-style: normal;
 	font-size: 10px;
 	text-transform: lowercase;
 	color: #000000;
 	background-color: white;
-	padding: 0px 60px;
+	padding: 40px 40px;
 	mix-blend-mode: normal;
-	/*opacity: 0.3;*/
 }
 #thalescode_img {
 	width: 300px;
 	height: 300px;
 	border-radius: 200px;
-	margin-left: -120px;
+	margin-left: -20px;
 	margin-top: 30px;
 }
-/*.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}*/
 .latestjobs {
 	padding: 15px;
 	margin: 0px 0px 15px 0px;
@@ -291,7 +333,7 @@ p {
 	font-size: 8px;
 }
 .line5 {
-	top: -15px;
+	top: -8px;
 	border-top: 3px solid #000000;
 	width: 20px;
 	position: absolute;
@@ -302,20 +344,23 @@ p {
 	opacity: 0.2;
 }
 .long_hr {
-	left: 4.75%;
-	right: -4.94%;
 	opacity: 0.4;
 	border: 1px solid #979797;
 }
+.line7 {
+	top: 15px;
+	border-top: 4px solid #333;
+	width: 30px;
+	position: absolute;
+}
 .getWhereyouAreGoing_Title {
-	position: relative;
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
 	line-height: 46px;
 	font-size: 30px;
 	color: #000000;
-	margin-top: 150px;
+	margin-top: 50px;
 	margin-bottom: 20px;
 }
 .getWhereyouAreGoing {
@@ -354,22 +399,22 @@ p {
     padding: 8px 8px;
     text-decoration: none;
     display: inline-block;
-    float: left;
     margin-top: 40px;
     padding: 5px 15px;
+    float: left;
 }
 #boxImg {
-	width: 400px;
-	height: 400px;
-	margin-top: 100px;
-	margin-left: 30px;
+	width: 300px;
+	height: 300px;
+	margin-top: 150px;
+	margin-left: 150px;
 }
 .Why_ThalesCode {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 30px;
-	line-height: 10px;
+	line-height: 30px;
 	text-align: center;
 	color: #2B3247;
 }
@@ -378,7 +423,7 @@ p {
 	font-style: normal;
 	font-weight: 500;
 	font-size: 12px;
-	line-height: normal;
+	line-height: 30px;
 	text-align: center;
 	text-transform: uppercase;
 	color: #2B3247;
@@ -390,31 +435,30 @@ p {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
-	line-height: 5px;
+	font-size: 18px;
+	line-height: 25px;
 	text-transform: uppercase;
 	color: #000000;
+	margin-top: 30px;
 	margin-left: 450px;
-	margin-top: 20px;
 }
 .Candidates {
 	font-family: Ubuntu;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 15px;
-	line-height: 5px;
+	font-size: 18px;
+	line-height: 25px;
 	text-transform: uppercase;
 	color: #8C93AA;
 	mix-blend-mode: normal;
-	opacity: 0.2;
-	margin-left: 300px;
-	margin-top: 20px;
+	opacity: 0.5;
+	margin-left: 35px;
 }
 .Why_ThalesCode_line5 {
 	border-top: 4px solid #333;
 	width: 30px;
 	margin-bottom: 50px;
-	margin-left: 200px;
+	margin-left: 540px;
 }
 .number {
 	font-family: Ubuntu;
@@ -423,9 +467,6 @@ p {
 	font-size: 19px;
 	line-height: normal;
 	color: #2CA1F8;
-	margin-top: 0px;
-	margin-top: 0px;
-	padding-top: 0px;
 }
 .IT_Training {
 	font-family: Ubuntu;
@@ -446,6 +487,25 @@ p {
 	mix-blend-mode: normal;
 	opacity: 0.5;
 }
+#findmore2 {
+	background-color: white;
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 16px;
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: lightgrey;
+	float: right;
+    border-radius: 19px;
+    text-align: center;
+    border: 2px solid lightgrey;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0px;
+}
 .ThalesBlog_title {
 	font-family: Ubuntu;
 	font-style: normal;
@@ -453,7 +513,7 @@ p {
 	font-size: 35px;
 	line-height: 73px;
 	padding-top: 25px;
-	margin-top: 80px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 	color: #2B3247;
@@ -470,6 +530,25 @@ p {
 	color: #2B3247;
 	mix-blend-mode: normal;
 	opacity: 0.5;
+}
+#findmore1 {
+	background-color: white;
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 16px;
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: lightgrey;
+	float: right;
+    border-radius: 19px;
+    text-align: center;
+    border: 2px solid lightgrey;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0px;
 }
 .card-text_1 {
 	font-family: Ubuntu;
@@ -614,7 +693,8 @@ td {
 	background-color: #2B3247
 }
 .footer {
-	margin-left: 120px;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 ul {
 	list-style-type: none;
@@ -637,9 +717,8 @@ li {
 	line-height: normal;
 	letter-spacing: 0.84px;
 	color: #000000;
-	margin-right: 30px;
-	padding-right: 30px;
-	padding-bottom: 13px;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 .footer_partners {
 	font-family: Ubuntu;
@@ -649,7 +728,8 @@ li {
 	line-height: normal;
 	letter-spacing: 0.84px;
 	color: #000000;
-	padding-bottom: 13px;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 .footer_subscribe {
 	font-family: Ubuntu;
@@ -658,7 +738,9 @@ li {
 	font-size: 14px;
 	line-height: normal;
 	letter-spacing: 0.84px;
-	margin-left: 250px;
+	float: right;
+	margin: 0 !important;
+	padding: 0 !important;
 	color: #000000;
 }
 .subscribe_email {
@@ -670,9 +752,9 @@ li {
 	color: #000000;
 	mix-blend-mode: normal;
 	opacity: 0.4;
-	margin-left: 250px;
-	margin-top: 15px;
-	padding: 15px;
+	float: right;
+	margin: 0 !important;
+	padding: 0 !important;
 	size: 200;
 }
 .Copyright {
@@ -684,7 +766,9 @@ li {
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	color: #000000;
-	margin-left: 250px;
+	float: right;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 .CarouselContainer {
     width: 100%;
